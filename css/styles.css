@@ -1,10 +1,30 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+html{
+    position: relative;
+    min-height: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    overflow: auto;
+    height: auto;
+    max-width: 100%;
+
+}
 body {
+    position: relative;
+    min-height: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    overflow: auto;
+    height: auto;
+    max-width: 100%;
     font-family: 'Open Sans', sans-serif;
     color: #666;
+    text-align: center;
 }
-
-
+header[role="banner"] #logo-main {
+    display: block;
+    margin: 20px auto;
+}
 /* STRUCTURE */
 
 #pagewrap {
@@ -12,8 +32,7 @@ body {
     width: 960px;
     margin: 20px auto;
 }
-
-header {
+#top {
     height: 100px;
     padding: 0 15px;
 }
@@ -25,17 +44,22 @@ header {
 }
 
 #middle {
-    width: 294px;
-    /* Account for margins + border values */
+    width: 294px; /* Account for margins + border values */
     float: left;
     padding: 5px 15px;
-    margin: 0 5px 5px 5px;
+    margin: 0px 5px 5px 5px;
 }
 
 #sidebar {
-    width: 270px;
-    padding: 5px 15px;
+    width: 280px;
+    /*padding: 5px 15px;*/
     float: left;
+    padding-left: 10px;
+}
+
+#fourth {
+    clear: both;
+    padding: 0 15px;
 }
 
 footer {
@@ -43,15 +67,12 @@ footer {
     padding: 0 15px;
 }
 
-
 /************************************************************************************
 MEDIA QUERIES
 *************************************************************************************/
-
-
 /* for 980px or less */
-
 @media screen and (max-width: 980px) {
+
     #pagewrap {
         width: 94%;
     }
@@ -62,44 +83,46 @@ MEDIA QUERIES
     #middle {
         width: 41%;
         padding: 1% 4%;
-        margin: 0 0 5px 5px;
+        margin: 0px 0px 5px 5px;
         float: right;
     }
+
     #sidebar {
         clear: both;
         padding: 1% 4%;
         width: auto;
         float: none;
     }
-    header,
-    footer {
+
+    header, footer {
         padding: 1% 4%;
     }
 }
 
-
 /* for 700px or less */
-
 @media screen and (max-width: 600px) {
+
     #content {
         width: auto;
         float: none;
     }
+
     #middle {
         width: auto;
         float: none;
-        margin-left: 0;
+        margin-left: 0px;
     }
+
     #sidebar {
         width: auto;
         float: none;
     }
+
 }
 
-
 /* for 480px or less */
-
 @media screen and (max-width: 480px) {
+
     header {
         height: auto;
     }
@@ -109,28 +132,27 @@ MEDIA QUERIES
     #sidebar {
         display: none;
     }
+
 }
+
 
 #content {
     background: #f8f8f8;
 }
-
 #sidebar {
     background: #f0efef;
 }
-
-header,
-#content,
-#middle,
-#sidebar {
+#fourth{
+    #f0efef;
+}
+header, #content, #middle, #sidebar, #fourth {
     margin-bottom: 5px;
 }
 
-#pagewrap,
-header,
-#content,
-#middle,
-#sidebar,
-footer {
-    border: solid 1px #ccc;
+#pagewrap, header, #content, #middle, #sidebar, footer {
+    border: dashed 1px #ccc;
+}
+
+#fourth {
+    border: dashed 1px #ccc;
 }
